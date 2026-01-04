@@ -34,6 +34,8 @@ const skills = {
   backend: [
     "NestJS",
     "Node.js",
+    "Python",
+    "FastAPI",
     "PostgreSQL",
     "Prisma",
     "Supabase",
@@ -50,6 +52,7 @@ const skills = {
     "Git",
     "Docker",
     "Vercel",
+    "Railway",
     "PortOne",
     "Toss Payments",
   ],
