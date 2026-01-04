@@ -281,13 +281,17 @@ const personalProjects = [
 
 // 포트폴리오 작업물
 const portfolioWorks = [
-  { title: "차량 구독 플랫폼", description: "차량 구독 서비스 웹사이트" },
-  { title: "정육점 사이트", description: "정육 쇼핑몰" },
-  { title: "따우전스 브랜딩", description: "브랜드 웹사이트" },
-  { title: "모바일 청첩장", description: "디지털 청첩장 서비스" },
-  { title: "한식 웹사이트", description: "한식당 웹사이트" },
-  { title: "인사 플랫폼", description: "HR 관리 시스템" },
-  { title: "견적서 템플릿", description: "견적서 생성 도구" },
+  { title: "인사 플랫폼", description: "HR 관리 시스템", link: "https://v0-hr-master-website.vercel.app/" },
+  { title: "정육점 사이트", description: "정육 쇼핑몰", link: "https://v0--rust-seven.vercel.app/" },
+  { title: "법률사무소", description: "법률 서비스 웹사이트", link: "https://v0-law-firm-website-design-three.vercel.app/" },
+  { title: "회사 랜딩", description: "기업 소개 웹사이트", link: "https://v0-hart-company-website.vercel.app/" },
+  { title: "장례식장", description: "장례 서비스 웹사이트", link: "https://v0-funeral-page-design.vercel.app/" },
+  { title: "한상스테이", description: "숙박 브랜딩 웹사이트", link: "https://v0-ml0d3l.vercel.app/" },
+  { title: "따우전스 브랜딩", description: "브랜드 웹사이트", link: "https://v0-customizing-korean-website.vercel.app/" },
+  { title: "모두카 브랜딩", description: "차량 서비스 브랜딩", link: "https://www.modoocar.com/" },
+  { title: "견적서 템플릿", description: "견적서 생성 도구", link: "https://v0-proposal-document-creation.vercel.app/" },
+  { title: "모바일 청첩장", description: "디지털 청첩장 서비스", link: "https://v0-mobile-wedding-invitation-ochre.vercel.app/" },
+  { title: "분양 사무소", description: "부동산 분양 웹사이트", link: "https://v0-handphone-mockups.vercel.app/" },
 ];
 
 const typeIcons = {
@@ -551,15 +555,21 @@ export default function Projects() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {portfolioWorks.map((work, index) => (
-              <div
+              <a
                 key={index}
-                className="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer group"
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group flex flex-col justify-between"
               >
-                <h4 className="font-medium text-sm group-hover:text-blue-600 transition-colors">
-                  {work.title}
-                </h4>
-                <p className="text-xs text-gray-500 mt-1">{work.description}</p>
-              </div>
+                <div>
+                  <h4 className="font-medium text-sm group-hover:text-blue-600 transition-colors">
+                    {work.title}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">{work.description}</p>
+                </div>
+                <ExternalLink size={14} className="text-gray-300 group-hover:text-blue-500 mt-2 transition-colors" />
+              </a>
             ))}
           </div>
         </div>
