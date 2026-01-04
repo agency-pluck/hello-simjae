@@ -44,6 +44,7 @@ const skills = {
   mobile: [
     "React Native",
     "Expo",
+    "Flutter",
   ],
   tools: [
     "Git",
